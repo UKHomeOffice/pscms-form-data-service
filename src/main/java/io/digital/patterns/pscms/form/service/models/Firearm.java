@@ -1,16 +1,18 @@
 package io.digital.patterns.pscms.form.service.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "firearm")
-@Setter
-@Getter
+@Data
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@PrimaryKeyJoinColumn(name = "itemId")
 public class Firearm extends PostSeizureItem {
 
     @Column(name = "serialBarrel")

@@ -14,8 +14,9 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: drop
+      ddl-auto: create
       show-sql: true
+      default_schema: public
     name: pscms-form-data-service
   security:
     oauth2:

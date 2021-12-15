@@ -1,14 +1,16 @@
 package io.digital.patterns.pscms.form.service.models;
 
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "attachment")
-@Setter
-@Getter
+@Data
+@NoArgsConstructor
 public class Attachment {
     
     @Id
@@ -21,7 +23,6 @@ public class Attachment {
 
     @Column(name="url")
     private String url;
-
 
     @Column(name="businessKey")
     private String businessKey;

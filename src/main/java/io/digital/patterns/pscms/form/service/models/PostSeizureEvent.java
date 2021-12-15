@@ -48,14 +48,15 @@ public class PostSeizureEvent {
     @Column(name = "otherInformation")
     private String otherInformation;
 
-
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "businessKey")
+    private List<Attachment> attachments;
 
     @Column(name = "eventMode")
     private String eventMode;
 
-
-
-
-
+    @OneToMany( fetch = FetchType.LAZY)
+    @JoinColumn(name = "businessKey")
+    private List<PostSeizureItem> items;
 
 }

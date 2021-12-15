@@ -1,14 +1,15 @@
 package io.digital.patterns.pscms.form.service.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table
-@Setter
-@Getter
+@Data
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@PrimaryKeyJoinColumn(name = "itemId")
 public class DrugItem extends PostSeizureItem {
 
     @Column(name = "drug_id", unique = true)

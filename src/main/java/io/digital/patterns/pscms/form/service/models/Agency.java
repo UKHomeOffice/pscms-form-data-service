@@ -1,14 +1,16 @@
 package io.digital.patterns.pscms.form.service.models;
 
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="agency")
-@Setter
-@Getter
+@Data
+@NoArgsConstructor
 public class Agency {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Calendar;
 
 @Entity
@@ -11,7 +12,7 @@ import java.util.Calendar;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Setter
 @Getter
-public class PostSeizureItem {
+public class PostSeizureItem implements Serializable {
 
     @Id
     @Column(name = "itemId", nullable = false, unique = true)

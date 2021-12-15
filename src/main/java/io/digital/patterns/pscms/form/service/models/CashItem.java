@@ -1,14 +1,15 @@
 package io.digital.patterns.pscms.form.service.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="cash")
-@Setter
-@Getter
+@Table(name="cash", schema = "public")
+@Data
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@PrimaryKeyJoinColumn(name = "itemId")
 public class CashItem extends PostSeizureItem {
 
     @Column(name = "cashAmount")
