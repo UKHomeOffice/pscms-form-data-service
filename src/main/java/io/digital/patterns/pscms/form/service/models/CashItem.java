@@ -1,0 +1,23 @@
+package io.digital.patterns.pscms.form.service.models;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="cash")
+@Setter
+@Getter
+public class CashItem extends PostSeizureItem {
+
+    @Column(name = "cashAmount")
+    private String cashAmount;
+
+    @Column(name = "cashWords")
+    private String cashWords;
+
+    @Column(name = "cashCurrency")
+    private String cashCurrency;    
+
+}
