@@ -8,13 +8,11 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "attachment")
 @Data
 @NoArgsConstructor
 public class Attachment {
-    
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name="attachmentId")
     private Long attachmentId;
 
@@ -24,7 +22,6 @@ public class Attachment {
     @Column(name="url")
     private String url;
 
-    @Column(name="businessKey")
-    private String businessKey;
-    
+    @Column(name="attachmentBusinessKey")
+    private String attachmentBusinessKey;
 }

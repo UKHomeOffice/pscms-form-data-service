@@ -5,11 +5,10 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name="cash", schema = "public")
+@Table(name="cash")
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@PrimaryKeyJoinColumn(name = "itemId")
 public class CashItem extends PostSeizureItem {
 
     @Column(name = "cashAmount")

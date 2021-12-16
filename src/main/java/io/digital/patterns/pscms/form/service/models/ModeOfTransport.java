@@ -8,13 +8,13 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "mode_of_transport")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Setter
 @Getter
 public class ModeOfTransport implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     @Column(name = "itemId")

@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 @Entity
 @Table(name = "cop_epms_item_gold")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Setter
 @Getter
 public class PostSeizureItem implements Serializable {
@@ -19,8 +19,8 @@ public class PostSeizureItem implements Serializable {
     private String itemId;
 
 
-    @Column(name = "businessKey")
-    private String businesskey;
+    @Column(name = "itemBusinessKey")
+    private String itemBusinessKey;
 
     @Column(name = "itemDescription")
     private String itemDescription;
@@ -49,7 +49,7 @@ public class PostSeizureItem implements Serializable {
     @Column(name = "item_MMC")
     private String itemMMC;
 
-    @OneToOne(optional = true, fetch = FetchType.LAZY)
+    @OneToOne(cascade=CascadeType.ALL, optional = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "itemId", referencedColumnName = "itemId")
     private Agency agency;
 

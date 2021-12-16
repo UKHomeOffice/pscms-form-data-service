@@ -17,6 +17,9 @@ import java.util.List;
 public class PostSeizureEvent {
 
     @Id
+    @GeneratedValue
+    private long id;
+
     @Column(unique = true, nullable = false, name = "businessKey")    
     private String businessKey;
 
@@ -48,15 +51,15 @@ public class PostSeizureEvent {
     @Column(name = "otherInformation")
     private String otherInformation;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "businessKey")
+    @OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "attachmentBusinessKey", referencedColumnName = "businessKey")
     private List<Attachment> attachments;
 
     @Column(name = "eventMode")
     private String eventMode;
 
-    @OneToMany( fetch = FetchType.LAZY)
-    @JoinColumn(name = "businessKey")
+    @OneToMany(cascade=CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "itemBusinessKey", referencedColumnName = "businessKey")
     private List<PostSeizureItem> items;
 
 }
