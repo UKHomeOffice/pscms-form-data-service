@@ -1,0 +1,17 @@
+services:
+  pscms_form_data_service:
+    image: postgres:10-alpine
+    restart: on-failure
+    container_name: pscms_form_data_service
+    environment:
+      POSTGRES_DB: pscmsformdb
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U root password" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    ports:
+      - 5439:5432

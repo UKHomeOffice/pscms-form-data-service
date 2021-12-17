@@ -1,0 +1,249 @@
+[
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "eventPort": {
+        "id": "=toString"
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "attachmentsEaB": {
+        "eventAttachments": "entry.attachments"
+      },
+      "businessKey": [
+        "meta.businessKey",
+        "entry.custodyRef"
+      ],
+      "#2021-11-15T09:06:19.2457741+00:00": "entry.dateEntered",
+      "eventDateTime": [
+        "meta.createDateTime",
+        "entry.seizedDate"
+      ],
+      "submittingUsersEmail": [
+        "meta.createdBy",
+        "entry.obiEmail"
+      ],
+      "#12345": "meta.formId",
+      "#CEMA Section 139": "entry.reasonDetained.description",
+      "#09": "entry.reasonDetained.value",
+      "#D": "entry.reasonDetained.value2",
+      "eventOfficerDetails": {
+        "*": {
+          "officer": {
+            "email": "entry.oicEmail"
+          }
+        }
+      },
+      "#123456789": "meta.formVersionId",
+      "#8918e9b4-3faf-11eb-a6c3-1a40465f40ba": "meta.process.definitionId",
+      "#35592967-7996-4359-8e60-972d1f0f97e0": "meta.guid",
+      "#Aberdeen Airport": "entry.station.description",
+      "#ABD": "entry.station.value",
+      "otherInformation": [
+        "entry.comments",
+        "entry.notes[]"
+      ],
+      "itemsEaB": {
+        "items": {
+          "*": {
+            "#123": "tempItems[].id",
+            "#1": "tempItems[&1].number",
+            "#1": "tempItems[&1].status",
+            "#4": "tempItems[&1].agency.value",
+            "#NCA – Borders": "tempItems[&1].agency.description",
+            "#FRM": "tempItems[&1].category.value",
+            "#Farm Equipment": "tempItems[&1].category.description",
+            "#Farm Equipment": "tempItems[&1].description",
+            "#Plough": "tempItems[&1].subCategory.description",
+            "#FRM": "tempItems[&1].subCategory.category",
+            "#283": "tempItems[&1].subCategory.value",
+            "#Red": "tempItems[&1].color",
+            "#test comments": "tempItems[&1].comments",
+            "#123": "exhibitNo",
+            "#test notes 1": [
+              "tempItems[&1].notes[]"
+            ],
+            "#test notes 2": [
+              "tempItems[&1].notes[]"
+            ],
+            "#1010D741": "tempItems[&1].storageLocation.description",
+            "#OPB": "tempItems[&1].storageLocation.category",
+            "#1010D741": "tempItems[&1].storageLocation.value",
+            "#Farm Equipment Make": "tempItems[&1].make",
+            "#Farm Equipment Model": "tempItems[&1].model",
+            "quantity": "tempItems[&1].quantity",
+            "#0": "tempItems[&1].revenue",
+            "seizedAction": {
+              "seized": {
+                "#Seized": "entry.entryClass.description",
+                "#S": "entry.entryClass.value"
+              },
+              "detained": {
+                "#Detained": "entry.entryClass.description",
+                "#D": "entry.entryClass.value"
+              },
+              "abandoned": {
+                "#Abandoned": "entry.entryClass.description",
+                "#A": "entry.entryClass.value"
+              }
+            },
+            "#description": "tempItems[&1].unitOfMeasure.description",
+            "#999": "tempItems[&1].unitOfMeasure.value",
+            "#888": "tempItems[&1].unitOfMeasure.value2",
+            "sealNumbers": {
+              "0": {
+                "sealNo": "tempItems[&1].sealNo"
+              }
+            },
+            "#serial 1": "tempItems[&1].serial1",
+            "#serial 2": "tempItems[&1].serial2",
+            "#false": "tempItems[&1].anpr",
+            "#12345qwerty": "tempItems[&1].engineNo"
+          }
+        }
+      },
+      "cashEaB": {
+        "cash": {
+          "*": {
+            "#0": "tempCash[].entryId",
+            "#123": "tempCash[].id",
+            "#1": "tempCash[&1].number",
+            "#1": "tempCash[&1].status",
+            "#legacy description": "tempCash[&1].agency.description",
+            "#4": "tempCash[&1].agency.value",
+            "#NCA – Borders": "tempCash[&1].agency.description",
+            "#CAS": "tempCash[&1].category.value",
+            "#Currency": "tempCash[&1].category.description",
+            "#Barrel of money": "tempCash[&1].description",
+            "#Money Orders": "tempCash[&1].subCategory.description",
+            "#77": "tempCash[&1].subCategory.value",
+            "#CAS": "tempCash[&1].subCategory.category",
+            "#Red": "tempCash[&1].color",
+            "#Found in van": "tempCash[&1].comments",
+            "#123": "tempCash[&1].exhibitNo",
+            "#test cashnotes 1": [
+              "tempCash[&1].notes[]"
+            ],
+            "#test cash notes 2": [
+              "tempCash[&1].notes[]"
+            ],
+            "#1010D741": "tempCash[&1].storageLocation.description",
+            "#OPB": "tempCash[&1].storageLocation.category",
+            "#1010D741": "tempCash[&1].storageLocation.value",
+            "#0": "tempCash[&1].number",
+            "quantity": "tempCash[&1].quantity",
+            "#0": "tempCash[&1].revenue",
+            "#Amount": "tempCash[&1].unitOfMeasure.description",
+            "#9": "tempCash[&1].unitOfMeasure.value",
+            "sealNumbers": {
+              "0": {
+                "sealNo": "tempCash[&1].sealNo"
+              }
+            },
+            "#cash serial 1": "tempCash[&1].serial1",
+            "#cash serial 2": "tempCash[&1].serial2",
+            "#1000000": "tempCash[&1].cashAmount",
+            "#One million Euros": "tempCash[&1].cashAmountDescription",
+            "#Euro": "tempCash[&1].currency.description",
+            "#EUR": "tempCash[&1].currency.value"
+          }
+        }
+      },
+      "firearmsEaB": {
+        "firearms": {
+          "*": {
+            "#0": "tempFirearms[].entryId",
+            "#123": "tempFirearms[].id",
+            "#1": "tempFirearms[&1].number",
+            "#1": "tempFirearms[&1].status",
+            "#legacy description": "tempFirearms[&1].agency.description",
+            "#4": "tempFirearms[&1].agency.value",
+            "#NCA – Borders": "tempFirearms[&1].agency.description",
+            "#ARP": "tempFirearms[&1].category.value",
+            "#Firearm Parts": "tempFirearms[&1].category.description",
+            "#Barrel of money": "tempFirearms[&1].description",
+            "#Rifle Level Action Parts": "tempFirearms[&1].subCategory.description",
+            "#30": "tempFirearms[&1].subCategory.value",
+            "#ARP": "tempFirearms[&1].subCategory.category",
+            "#Black": "tempFirearms[&1].color",
+            "#Found in van": "tempFirearms[&1].comments",
+            "#123": "tempFirearms[&1].exhibitNo",
+            "#test Firearm notes 1": [
+              "tempFirearms[&1].notes[]"
+            ],
+            "#test Firearm notes 2": [
+              "tempFirearms[&1].notes[]"
+            ],
+            "#1010D741": "tempFirearms[&1].storageLocation.description",
+            "#OPB": "tempFirearms[&1].storageLocation.category",
+            "#1010D741": "tempFirearms[&1].storageLocation.value",
+            "#0": "tempFirearms[&1].number",
+            "quantity": "tempFirearms[&1].quantity",
+            "#0": "tempFirearms[&1].revenue",
+            "#Kilograms": "tempFirearms[&1].unitOfMeasure.description",
+            "#2": "tempFirearms[&1].unitOfMeasure.value",
+            "sealNumbers": {
+              "0": {
+                "sealNo": "tempFirearms[&1].sealNo"
+              }
+            },
+            "#firearm serial 1": "tempFirearms[&1].serial1",
+            "#firerarm serial 2": "tempFirearms[&1].serial2",
+            "#false": "tempFirearms[&1].firearmCheck",
+            "#Check not yet done": "tempFirearms[&1].firearmReason"
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "meta": "meta",
+      "entry": "entry",
+      "tempItems": "entry.items",
+      "tempCash": {
+        "*": "entry.items"
+      },
+      "tempFirearms": {
+        "*": "entry.items"
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "meta": {
+        "formName": "recordGoods",
+        "formTitle": "Record Goods"
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "eventPort": {
+        "id": "=toString"
+      },
+      "entry": {
+        "items": {
+          "*": {
+            "anpr": "=toBoolean",
+            "number": "=toInteger",
+            "status": "=toInteger",
+            "quantity": "=toInteger",
+            "cashAmount": "=toString",
+            "sentForAnalysis": "=toBoolean",
+            "excludeReports": "=toBoolean",
+            "firearmCheck": "=toBoolean",
+            "anpr": "=toBoolean"
+          }
+        }
+      },
+      "true": "=toBoolean"
+    }
+  }
+]
