@@ -1,0 +1,45 @@
+{
+  "eventMode": "Event test mode",
+  "attachments": [
+    {
+      "fileName": "fileName",
+      "attachmentId": 3,
+      "attachmentBusinessKey": "businessKey",
+      "url": "url"
+    }
+  ],
+  "parserFeatures": 8193,
+  "eventPort": "Glasgow Airport",
+  "rootValueSeparator": " ",
+  "epmsNumber": "999",
+  "otherInformation": "Not applicable",
+  "formatParserFeatures": 0,
+  "submittingUsersEmail": "test@test.com",
+  "businessKey": "DP-20201103-1",
+  "formatGeneratorFeatures": 0,
+  "bfOperationName": "Test Operation Name",
+  "id": 0,
+  "items": [
+    {
+      "itemId": "itemId",
+      "itemMMC": "mmC",
+      "agency": {
+        "OGDRef": "oGDRef",
+        "itemId": "itemId",
+        "businessKey": "agencyKey",
+        "contactsType": "contacts Type",
+        "id": 1,
+        "agencyName": "agencyName"
+      },
+      "itemCategory": "itemCategory",
+      "seizedAction": "seized action",
+      "storageLocation": "storage location",
+      "itemDescription": "description",
+      "store": "store",
+      "currentLocation": "location",
+      "itemBusinessKey": "item business key",
+      "itemFreeText": "free text"
+    }
+  ],
+  "generatorFeatures": 31
+}
