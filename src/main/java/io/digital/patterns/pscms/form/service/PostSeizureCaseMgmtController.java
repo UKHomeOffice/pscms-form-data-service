@@ -37,9 +37,9 @@ public class PostSeizureCaseMgmtController {
     } */
 
     @GetMapping("/events/{businessKey}")
-    public Optional<PostSeizureEvent> getEventsByBusinessKey(@PathVariable ("businessKey") String businessKey){
+    public String getEventsByBusinessKey(@PathVariable ("businessKey") String businessKey){
 
-        return service.getEventByBusinessKey(businessKey);
+        return service.getEventByBusinessKey(businessKey).toString();
 
     }
 }
